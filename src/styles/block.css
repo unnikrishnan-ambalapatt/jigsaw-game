@@ -53,6 +53,20 @@
   position: absolute;
 }
 
-.container {
-  position: relative;
+.puzzle {
+  background-image: url("../img/nums.png");
+  width: 89px;
+  height: 109px;
+}
+
+.piece1 {
+  background-position: 0px 0px;
+}
+
+.piece2 {
+  background-position: 0px -109px;
+}
+
+.piece3 {
+  background-position: 0px -218px;
 }
