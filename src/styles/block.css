@@ -1,4 +1,53 @@
-.image-resize {
-  width: 100px;
-  height: 100px;
+.position-zero {
+  clip: rect(0px, 89px, 109px, 0px);
+  position: absolute;
+}
+
+.position-one {
+  clip: rect(0px, 178px, 109px, 89px);
+  position: absolute;
+}
+
+.position-two {
+  clip: rect(0px, 267px, 109px, 178px);
+  position: absolute;
+}
+
+.position-three {
+  clip: rect(0px, 356px, 109px, 267px);
+  position: absolute;
+}
+
+.position-four {
+  clip: rect(110px, 89px, 218px, 0px);
+  position: absolute;
+}
+
+.position-five {
+  clip: rect(110px, 178px, 218px, 89px);
+  position: absolute;
+}
+
+.position-six {
+  clip: rect(110px, 356px, 218px, 178px);
+  position: absolute;
+}
+
+.position-seven {
+  clip: rect(217px, 89px, 327px, 0px);
+  position: absolute;
+}
+
+.position-eight {
+  clip: rect(217px, 178px, 327px, 89px);
+  position: absolute;
+}
+
+.position-nine {
+  clip: rect(217px, 356px, 327px, 178px);
+  position: absolute;
+}
+
+.container {
+  position: relative;
 }
