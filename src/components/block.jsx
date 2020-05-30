@@ -5,7 +5,7 @@ import "../styles/block.css";
 export default class Block extends React.Component {
   render() {
     return (
-      <div class="container">
+      <div>
         <img alt="logo" src={logo} className="position-zero"></img>
         <img alt="logo" src={logo} className="position-one"></img>
         <img alt="logo" src={logo} className="position-two"></img>

@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import Block from "./components/block";
+import Platform from "./components/platform";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Block />
+    <Platform />
   </React.StrictMode>,
   document.getElementById("root")
 );
