@@ -44,7 +44,12 @@
 }
 
 .position-nine {
-  clip: rect(217px, 356px, 327px, 178px);
+  clip: rect(217px, 267px, 327px, 178px);
+  position: absolute;
+}
+
+.position-blank {
+  clip: rect(217px, 356px, 327px, 267px);
   position: absolute;
 }
 
