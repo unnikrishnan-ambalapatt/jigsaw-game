@@ -5,7 +5,7 @@ import "../styles/block.css";
 export default class Block extends React.Component {
   render() {
     return (
-      <div>
+      <div className="container">
         {/* <img alt="logo" src={logo} className="position-zero"></img>
         <img alt="logo" src={logo} className="position-one"></img>
         <img alt="logo" src={logo} className="position-two"></img>
@@ -16,9 +16,9 @@ export default class Block extends React.Component {
         <img alt="logo" src={logo} className="position-seven"></img>
         <img alt="logo" src={logo} className="position-eight"></img>
         <img alt="logo" src={logo} className="position-nine"></img> */}
-        <div className="puzzle piece1"></div>
-        <div className="puzzle piece2"></div>
-        <div className="puzzle piece3"></div>
+        <div className="puzzle piece0"></div>
+        <div className="puzzle piece4"></div>
+        <div className="puzzle piece8"></div>
       </div>
     );
   }

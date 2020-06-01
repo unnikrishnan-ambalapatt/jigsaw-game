@@ -53,20 +53,24 @@
   position: absolute;
 }
 
+.container {
+  display: flex; /* or inline-flex */
+}
+
 .puzzle {
   background-image: url("../img/nums.png");
   width: 89px;
   height: 109px;
 }
 
-.piece1 {
+.piece0 {
   background-position: 0px 0px;
 }
 
-.piece2 {
+.piece4 {
   background-position: 0px -109px;
 }
 
-.piece3 {
-  background-position: 0px -218px;
+.piece8 {
+  background-position: 0px -217px;
 }
