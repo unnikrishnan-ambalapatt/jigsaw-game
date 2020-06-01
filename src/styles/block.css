@@ -59,18 +59,16 @@
 
 .puzzle {
   background-image: url("../img/nums.png");
-  width: 89px;
-  height: 109px;
 }
 
 .piece0 {
   background-position: 0px 0px;
 }
 
-.piece4 {
+.piece1 {
   background-position: 0px -109px;
 }
 
-.piece8 {
+.piece2 {
   background-position: 0px -217px;
 }
