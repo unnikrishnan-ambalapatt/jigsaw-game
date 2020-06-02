@@ -1,23 +1,8 @@
 import React from "react";
-import logo from "../img/nums.png";
 import "../styles/block.css";
 import { Droppable, Draggable } from "react-beautiful-dnd";
 
 const grid = 30;
-
-const reorder = (list, startIndex, endIndex) => {
-  const result = Array.from(list);
-  const [removed] = result.splice(startIndex, 1);
-  result.splice(endIndex, 0, removed);
-
-  return result;
-};
-
-const getItems = count =>
-  Array.from({ length: count }, (v, k) => k).map(k => ({
-    id: `item-${k}`,
-    className: `puzzle piece${k}`
-  }));
 
 const getListStyle = isDraggingOver => ({
   //background: isDraggingOver ? "lightblue" : "lightgrey",
@@ -39,30 +24,12 @@ const getItemStyle = (isDragging, draggableStyle) => ({
 });
 
 export default class Block extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      items: getItems(3)
-    };
-    this.onDragEnd = this.onDragEnd.bind(this);
-  }
-
   onDragEnd(result) {
     console.log("Drag end in block");
     // dropped outside the list
     if (!result.destination) {
       return;
     }
-
-    const items = reorder(
-      this.state.items,
-      result.source.index,
-      result.destination.index
-    );
-
-    this.setState({
-      items
-    });
   }
 
   render() {
@@ -74,13 +41,8 @@ export default class Block extends React.Component {
             ref={provided.innerRef}
             style={getListStyle(snapshot.isDraggingOver)}
           >
-            {this.state.items.map((item, index) => (
-              <Draggable
-                key={item.id}
-                draggableId={item.id}
-                index={index}
-                onDragEnd={this.onDragEnd}
-              >
+            {this.props.items.map((item, index) => (
+              <Draggable key={item.id} draggableId={item.id} index={index}>
                 {(provided, snapshot) => (
                   <div
                     className={item.className}
