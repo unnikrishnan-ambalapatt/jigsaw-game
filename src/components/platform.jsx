@@ -1,6 +1,6 @@
 import React from "react";
 import Block from "./block";
-import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
+import { DragDropContext } from "react-beautiful-dnd";
 
 const getItems = count =>
   Array.from({ length: count }, (v, k) => k).map(k => ({
@@ -50,7 +50,7 @@ class Platform extends React.Component {
         <h1>Jigsaw</h1>
         <h2>Number of moves</h2>
 
-        <DragDropContext onDragEnd={this.onDragEnd}>
+        <DragDropContext onDragEnd={this.onDragEnd} className="container">
           <Block items={this.state.items} />
         </DragDropContext>
       </div>

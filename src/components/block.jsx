@@ -6,8 +6,10 @@ const grid = 30;
 
 const getListStyle = isDraggingOver => ({
   //background: isDraggingOver ? "lightblue" : "lightgrey",
+  display: "flex",
+  flexWrap: "wrap",
   padding: grid,
-  width: 89
+  width: 200
 });
 
 const getItemStyle = (isDragging, draggableStyle) => ({
@@ -15,6 +17,8 @@ const getItemStyle = (isDragging, draggableStyle) => ({
   userSelect: "none",
   padding: grid * 2,
   margin: `0 0 ${grid}px 0`,
+  display: "flex",
+  flexWrap: "wrap",
 
   // change background colour if dragging
   //background: isDragging ? "lightgreen" : "grey",
@@ -36,7 +40,7 @@ export default class Block extends React.Component {
     return (
       <Droppable droppableId="droppable">
         {(provided, snapshot) => (
-          <span
+          <div
             {...provided.droppableProps}
             ref={provided.innerRef}
             style={getListStyle(snapshot.isDraggingOver)}
@@ -58,14 +62,9 @@ export default class Block extends React.Component {
               </Draggable>
             ))}
             {provided.placeholder}
-          </span>
+          </div>
         )}
       </Droppable>
-      //   <div className="container">
-      //     <div className="puzzle piece0"></div>
-      //     <div className="puzzle piece4"></div>
-      //     <div className="puzzle piece8"></div>
-      //   </div>
     );
   }
 }
