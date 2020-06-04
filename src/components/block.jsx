@@ -38,7 +38,7 @@ export default class Block extends React.Component {
 
   render() {
     return (
-      <Droppable droppableId="droppable">
+      <Droppable droppableId="droppable" direction="horizontal">
         {(provided, snapshot) => (
           <div
             {...provided.droppableProps}
