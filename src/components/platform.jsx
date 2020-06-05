@@ -52,6 +52,7 @@ class Platform extends React.Component {
 
         <DragDropContext onDragEnd={this.onDragEnd} className="container">
           <Block items={this.state.items} />
+          <Block items={this.state.items} />
         </DragDropContext>
       </div>
     );
