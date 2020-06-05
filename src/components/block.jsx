@@ -7,16 +7,15 @@ const grid = 30;
 const getListStyle = isDraggingOver => ({
   //background: isDraggingOver ? "lightblue" : "lightgrey",
   display: "flex",
-  flexWrap: "wrap",
-  padding: grid,
-  width: 1000
+  flexWrap: "wrap"
+  // padding: grid
+  // width: 100
 });
 
 const getItemStyle = (isDragging, draggableStyle) => ({
   // some basic styles to make the items look a bit nicer
   userSelect: "none",
-  padding: grid * 2,
-  margin: `0 0 ${grid}px 0`,
+  // margin: `0 0 ${grid}px 0`,
   display: "flex",
   flexWrap: "wrap",
 
@@ -39,7 +38,7 @@ export default class Block extends React.Component {
   render() {
     return (
       <div>
-        <Droppable droppableId="droppable1">
+        <Droppable droppableId="droppable1" direction="horizontal">
           {(provided, snapshot) => (
             <div
               {...provided.droppableProps}

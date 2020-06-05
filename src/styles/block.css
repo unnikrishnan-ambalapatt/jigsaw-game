@@ -4,10 +4,14 @@
 }
 
 .puzzle {
-  background-image: url("../img/nums.png");
+  /* background-image: url("../img/nums.png"); */
+  width: 100px;
+  height: 100px;
+  background: red;
+  border: 1px solid black;
 }
 
-.piece0 {
+/* .piece0 {
   background-position: 0px 0px;
   background-repeat: no-repeat;
   flex: flex-shrink;
@@ -23,4 +27,4 @@
   background-position: 0px -217px;
   background-repeat: no-repeat;
   flex: flex-shrink;
-}
+} */
