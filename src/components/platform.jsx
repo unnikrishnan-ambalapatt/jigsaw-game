@@ -24,6 +24,44 @@ const reorder = (list, startIndex, endIndex) => {
   return result;
 };
 
+let moveCount = 0;
+
+const moveBetweenGroups = (items, result) => {
+  console.log("fromList: " + items[result.source.droppableId]);
+  console.log("toList: " + items[result.destination.droppableId]);
+  console.log("toPosition: " + result.destination.index);
+  console.log(
+    "movedItem: " + items[result.source.droppableId][result.source.index]["id"]
+  );
+  console.log(
+    "Delete index: " +
+      items[result.source.droppableId].indexOf(
+        items[result.source.droppableId][result.source.index]
+      )
+  );
+  console.log(
+    "Before items[result.source.droppableId]: " +
+      items[result.source.droppableId]
+  );
+  const movingItem = items[result.source.droppableId].splice(
+    items[result.source.droppableId].indexOf(
+      items[result.source.droppableId][result.source.index]
+    ),
+    1
+  );
+  movingItem.id = `item-${result.source.droppableId * 10 +
+    result.destination.index}-${moveCount++}`;
+  items[result.destination.droppableId].splice(
+    result.destination.index,
+    0,
+    movingItem
+  );
+  console.log(
+    "After items[result.source.droppableId]: " +
+      items[result.source.droppableId]
+  );
+};
+
 class Platform extends React.Component {
   constructor(props) {
     super(props);
@@ -52,18 +90,7 @@ class Platform extends React.Component {
       });
     } else {
       const items = this.state.items;
-      const itemFrom = reorder(
-        this.state.items[result.source.droppableId],
-        result.source.index,
-        result.destination.index
-      );
-      const itemTo = reorder(
-        this.state.items[result.destination.droppableId],
-        result.destination.index,
-        result.source.index
-      );
-      items[result.destination.droppableId] = itemFrom;
-      items[result.source.droppableId] = itemTo;
+      moveBetweenGroups(items, result);
       this.setState({
         items
       });
