@@ -38,7 +38,7 @@ export default class Block extends React.Component {
   render() {
     return (
       <div>
-        <Droppable droppableId="droppable1" direction="horizontal">
+        <Droppable droppableId={this.props.blockId} direction="horizontal">
           {(provided, snapshot) => (
             <div
               {...provided.droppableProps}
@@ -57,7 +57,9 @@ export default class Block extends React.Component {
                         snapshot.isDragging,
                         provided.draggableProps.style
                       )}
-                    ></div>
+                    >
+                      {item.id}
+                    </div>
                   )}
                 </Draggable>
               ))}

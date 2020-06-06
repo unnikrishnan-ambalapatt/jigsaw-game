@@ -28,21 +28,30 @@ class Platform extends React.Component {
   }
 
   onDragEnd(result) {
-    console.log("Drag end in platform");
     // dropped outside the list
     if (!result.destination) {
       return;
     }
 
-    const items = reorder(
-      this.state.items,
-      result.source.index,
-      result.destination.index
-    );
+    if (result.destination.droppableId == result.source.droppableId) {
+      const items = reorder(
+        this.state.items,
+        result.source.index,
+        result.destination.index
+      );
+      this.setState({
+        items
+      });
 
-    this.setState({
-      items
-    });
+      const items2 = reorder(
+        this.state.items2,
+        result.source.index,
+        result.destination.index
+      );
+      this.setState({
+        items2
+      });
+    }
   }
 
   render() {
@@ -52,8 +61,8 @@ class Platform extends React.Component {
         <h2>Number of moves</h2>
 
         <DragDropContext onDragEnd={this.onDragEnd} className="container">
-          <Block items={this.state.items} />
-          <Block items={this.state.items2} />
+          <Block items={this.state.items} blockId={"1"} />
+          <Block items={this.state.items2} blockId={"2"} />
         </DragDropContext>
       </div>
     );
