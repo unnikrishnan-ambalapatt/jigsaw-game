@@ -4,27 +4,57 @@
 }
 
 .puzzle {
-  /* background-image: url("../img/nums.png"); */
-  width: 100px;
+  background-image: url("../img/nums.png");
+  width: 88.5px;
   height: 100px;
-  background: red;
+  /* background: red; */
   border: 1px solid black;
 }
 
-/* .piece0 {
+.piece0 {
   background-position: 0px 0px;
   background-repeat: no-repeat;
   flex: flex-shrink;
 }
 
 .piece1 {
-  background-position: 0px -109px;
+  background-position: -88.5px 0px;
   background-repeat: no-repeat;
   flex: flex-shrink;
 }
 
 .piece2 {
-  background-position: 0px -217px;
+  background-position: -177px 0px;
   background-repeat: no-repeat;
   flex: flex-shrink;
-} */
+}
+
+.piece3 {
+  background-position: -265.5px 0px;
+  background-repeat: no-repeat;
+  flex: flex-shrink;
+}
+
+.piece10 {
+  background-position: -0px -109px;
+  background-repeat: no-repeat;
+  flex: flex-shrink;
+}
+
+.piece11 {
+  background-position: -88.5px -109px;
+  background-repeat: no-repeat;
+  flex: flex-shrink;
+}
+
+.piece12 {
+  background-position: -177px -109px;
+  background-repeat: no-repeat;
+  flex: flex-shrink;
+}
+
+.piece13 {
+  background-position: -265.5px -109px;
+  background-repeat: no-repeat;
+  flex: flex-shrink;
+}
