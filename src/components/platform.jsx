@@ -27,48 +27,16 @@ const reorder = (list, startIndex, endIndex) => {
 let moveCount = 0;
 
 const moveBetweenGroups = (items, result) => {
-  console.log("fromList: " + items[result.source.droppableId]);
-  console.log("toList: " + items[result.destination.droppableId]);
-  console.log("toPosition: " + result.destination.index);
-  console.log(
-    "movedItem: " + items[result.source.droppableId][result.source.index]["id"]
-  );
-  console.log(
-    "Delete index: " +
-      items[result.source.droppableId].indexOf(
-        items[result.source.droppableId][result.source.index]
-      )
-  );
-  console.log(
-    "Before items[result.source.droppableId]: " +
-      items[result.source.droppableId]
-  );
-  console.log(
-    "Before items[result.destination.droppableId]: " +
-      items[result.destination.droppableId]
-  );
   const movingItem = items[result.source.droppableId].splice(
     items[result.source.droppableId].indexOf(
       items[result.source.droppableId][result.source.index]
     ),
     1
   );
-  movingItem.id = `item-${result.source.droppableId}-${result.source
-    .droppableId *
-    10 +
-    result.destination.index}`;
   items[result.destination.droppableId].splice(
     result.destination.index,
     0,
-    movingItem
-  );
-  console.log(
-    "After items[result.source.droppableId]: " +
-      items[result.source.droppableId]
-  );
-  console.log(
-    "After items[result.destination.droppableId]: " +
-      items[result.destination.droppableId]
+    movingItem[0]
   );
 };
 
