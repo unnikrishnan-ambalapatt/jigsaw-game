@@ -3,6 +3,10 @@
   flex-wrap: wrap;
 }
 
+.pad {
+  padding: 25px;
+}
+
 .puzzle {
   background-image: url("../img/nums.png");
   width: 88.5px;

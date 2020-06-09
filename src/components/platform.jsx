@@ -45,7 +45,8 @@ class Platform extends React.Component {
     super(props);
     this.state = {
       items: getItemsArray(2),
-      platformOnDragEnd: props.onDragEnd
+      platformOnDragEnd: props.onDragEnd,
+      moveCount: moveCount
     };
     this.onDragEnd = this.onDragEnd.bind(this);
   }
@@ -55,6 +56,7 @@ class Platform extends React.Component {
     if (!result.destination) {
       return;
     }
+    moveCount++;
     if (result.destination.droppableId == result.source.droppableId) {
       const items = this.state.items;
       const item = reorder(
@@ -64,22 +66,24 @@ class Platform extends React.Component {
       );
       items[result.source.droppableId] = item;
       this.setState({
-        items
+        items,
+        moveCount
       });
     } else {
       const items = this.state.items;
       moveBetweenGroups(items, result);
       this.setState({
-        items
+        items,
+        moveCount
       });
     }
   }
 
   render() {
     return (
-      <div>
+      <div className="pad">
         <h1>Jigsaw</h1>
-        <h2>Number of moves</h2>
+        <h2>Number of moves: {this.state.moveCount}</h2>
 
         <DragDropContext onDragEnd={this.onDragEnd} className="container">
           <Block items={this.state.items[0]} blockId={"0"} />
