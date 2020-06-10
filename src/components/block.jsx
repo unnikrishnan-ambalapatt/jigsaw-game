@@ -5,17 +5,13 @@ import { Droppable, Draggable } from "react-beautiful-dnd";
 const grid = 30;
 
 const getListStyle = isDraggingOver => ({
-  //background: isDraggingOver ? "lightblue" : "lightgrey",
+  background: isDraggingOver ? "lightblue" : "lightgrey",
   display: "flex",
   flexWrap: "wrap"
-  // padding: grid
-  // width: 100
 });
 
 const getItemStyle = (isDragging, draggableStyle) => ({
   // some basic styles to make the items look a bit nicer
-  userSelect: "none",
-  // margin: `0 0 ${grid}px 0`,
   display: "flex",
   flexWrap: "wrap",
 
@@ -28,7 +24,6 @@ const getItemStyle = (isDragging, draggableStyle) => ({
 
 export default class Block extends React.Component {
   onDragEnd(result) {
-    console.log("Drag end in block");
     // dropped outside the list
     if (!result.destination) {
       return;

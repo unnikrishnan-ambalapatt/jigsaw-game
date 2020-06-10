@@ -1,5 +1,6 @@
 import React from "react";
 import Block from "./block";
+import "../styles/platform.css";
 import { DragDropContext } from "react-beautiful-dnd";
 
 const getItemsArray = arrayCount => {
@@ -82,13 +83,16 @@ class Platform extends React.Component {
   render() {
     return (
       <div className="pad">
-        <h1>Jigsaw</h1>
-        <h2>Number of moves: {this.state.moveCount}</h2>
-
-        <DragDropContext onDragEnd={this.onDragEnd} className="container">
-          <Block items={this.state.items[0]} blockId={"0"} />
-          <Block items={this.state.items[1]} blockId={"1"} />
-        </DragDropContext>
+        <div className="headerContainer">
+          <h1>Jigsaw</h1>
+          <h2>Number of moves: {this.state.moveCount}</h2>
+        </div>
+        <div className="container">
+          <DragDropContext onDragEnd={this.onDragEnd}>
+            <Block items={this.state.items[0]} blockId={"0"} />
+            <Block items={this.state.items[1]} blockId={"1"} />
+          </DragDropContext>
+        </div>
       </div>
     );
   }
