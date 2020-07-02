@@ -4,7 +4,7 @@ import "../styles/platform.css";
 import { DragDropContext } from "react-beautiful-dnd";
 
 const getItemsArray = arrayCount => {
-  let arr = new Array();
+  let arr = [];
   for (let i = 0; i < arrayCount; i++) {
     arr[i] = getItems(4, i);
   }
@@ -58,7 +58,7 @@ class Platform extends React.Component {
       return;
     }
     moveCount++;
-    if (result.destination.droppableId == result.source.droppableId) {
+    if (result.destination.droppableId === result.source.droppableId) {
       const items = this.state.items;
       const item = reorder(
         this.state.items[result.source.droppableId],

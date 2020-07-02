@@ -2,8 +2,6 @@ import React from "react";
 import "../styles/block.css";
 import { Droppable, Draggable } from "react-beautiful-dnd";
 
-const grid = 30;
-
 const getListStyle = isDraggingOver => ({
   background: isDraggingOver ? "lightblue" : "lightgrey",
   display: "flex",
