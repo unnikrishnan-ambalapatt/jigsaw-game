@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/jigsaw-game/static/css/main.ff050cff.chunk.css",
+    "main.js": "/jigsaw-game/static/js/main.a4341f85.chunk.js",
+    "main.js.map": "/jigsaw-game/static/js/main.a4341f85.chunk.js.map",
+    "runtime-main.js": "/jigsaw-game/static/js/runtime-main.03702b15.js",
+    "runtime-main.js.map": "/jigsaw-game/static/js/runtime-main.03702b15.js.map",
+    "static/js/2.d839fd8c.chunk.js": "/jigsaw-game/static/js/2.d839fd8c.chunk.js",
+    "static/js/2.d839fd8c.chunk.js.map": "/jigsaw-game/static/js/2.d839fd8c.chunk.js.map",
+    "index.html": "/jigsaw-game/index.html",
+    "precache-manifest.065e80a6994a763f39a5d32e81d98868.js": "/jigsaw-game/precache-manifest.065e80a6994a763f39a5d32e81d98868.js",
+    "service-worker.js": "/jigsaw-game/service-worker.js",
+    "static/css/main.ff050cff.chunk.css.map": "/jigsaw-game/static/css/main.ff050cff.chunk.css.map",
+    "static/js/2.d839fd8c.chunk.js.LICENSE.txt": "/jigsaw-game/static/js/2.d839fd8c.chunk.js.LICENSE.txt",
+    "static/media/platform.css": "/jigsaw-game/static/media/nums.456dcb23.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.03702b15.js",
+    "static/js/2.d839fd8c.chunk.js",
+    "static/css/main.ff050cff.chunk.css",
+    "static/js/main.a4341f85.chunk.js"
+  ]
+}
